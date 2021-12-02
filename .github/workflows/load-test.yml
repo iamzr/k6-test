@@ -1,12 +1,11 @@
 # .github/workflows/load-test.yml
 k6_load_test:
   name: k6 Load Test
-
   on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    push:
+      branches: [ main ]
+    pull_request:
+      branches: [ main ]
 
 
   runs-on: ubuntu-latest
