@@ -1,3 +1,5 @@
+# .github/workflows/load-test.yml
+
 k6_load_test:
   name: k6 Load Test
   runs-on: ubuntu-latest
@@ -10,3 +12,4 @@ k6_load_test:
       uses: k6io/action@v0.1
       with:
         filename: test.js
+
