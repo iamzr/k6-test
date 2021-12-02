@@ -1,19 +1,20 @@
-# .github/workflows/load-test.yml
-k6_load_test:
-  name: k6 Load Test
-  on:
-    push:
-      branches: [ main ]
-    pull_request:
-      branches: [ main ]
+name: k6 Load Test
 
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checkout
-      uses: actions/checkout@v1
-    - name: Run local k6 test
-      uses: k6io/action@v0.1
-      with:
-        filename: test.js
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: Checkout
+      - uses: actions/checkout@v1
+
+      - name: Run local k6 test
+      - uses: k6io/action@v0.1
+        with:
+          filename: test.js
